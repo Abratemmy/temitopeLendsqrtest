@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import { useState} from 'react'
 import Layout from '../../Components/Layouts/Layout'
 import arrowback from '../../assets/icons/arrowback.png'
 import "./UserDetail.scss";

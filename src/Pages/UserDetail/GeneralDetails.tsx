@@ -1,4 +1,3 @@
-import React from 'react'
 import type { User } from '../../types/User';
 
 function GeneralDetails({user}: {user: User}) {

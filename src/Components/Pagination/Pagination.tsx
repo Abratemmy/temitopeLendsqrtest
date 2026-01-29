@@ -8,7 +8,7 @@ interface PaginationProps<T> {
 
 function Pagination<T>({ table, data }: PaginationProps<T>) {
   const getPaginationRange = (
-    currentPage: number,
+    // currentPage: number,
     totalPages: number
   ): (number | "...")[] => {
     if (totalPages <= 7) {
@@ -21,13 +21,12 @@ function Pagination<T>({ table, data }: PaginationProps<T>) {
       totalPages - 2,
       totalPages - 1,
       totalPages,
-      currentPage  = 10
     ];
   };
 
   const currentPage = table.getState().pagination.pageIndex + 1;
   const totalPages = table.getPageCount();
-  const paginationRange = getPaginationRange(currentPage, totalPages);
+  const paginationRange = getPaginationRange(totalPages);
 
   return (
     <div className="pagination">
