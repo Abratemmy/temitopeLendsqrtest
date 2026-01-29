@@ -1,0 +1,230 @@
+.userDetailsPage{
+    width: 100%;
+    position: relative;
+    .back-button{
+        font-family: var(--textFamily);
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: var(--primaryColor);
+        background: transparent;
+        padding-bottom: 10px;
+        text-decoration: none;
+    }
+    .pageTitle{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        
+    }
+    @media screen and (max-width:600px) {
+        .pageTitle{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            padding-top: 20px;
+    
+        }    
+    }
+    .user-detail-actions{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        button{
+            font-family: var(--textFamily);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 10%;
+            text-align: center;
+            text-transform: uppercase;
+            height: 40px;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+        
+        &_blacklist{
+           border: 1px solid #E4033B;
+            color: #E4033B;
+        }
+        &_activate{
+            border: 1px solid #39CDCC;
+            color: #39CDCC;
+        }
+    }
+
+    .tier-stars {
+        display: flex;
+        gap: 3px;
+        .star {
+            font-size: 20px;
+            color: #E9B200; // light gray (empty)
+        }
+
+        .star-filled {
+            font-size: 20px;
+            color: #E9B200; 
+        }
+    }
+
+    .user-infoContainer{
+        .firstcard{
+            padding-bottom: 0px;
+        }
+        .user-info-top{
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            align-items: center;
+            .user-info-avatar{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                // border-right: 1px solid rgba(84, 95, 125, 0.2);
+                // padding-right: 40px;
+               
+                .imageAvatar{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background: rgba(131, 130, 130, 0.37);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .user-info-name{
+                    display: flex;
+                    flex-direction: column;
+                    h3{
+                        font-family: var(--textFamily);
+                        font-size: 22px;
+                        color: var(--primaryColor);
+                        font-weight: 500;
+                        letter-spacing: 0px;
+                        text-transform: capitalize;
+                    }
+                    .bvn{
+                        font-family: var(--textFamily);
+                        font-size: 14px;
+                        color: #545F7D;
+                        font-weight: 400;
+                        letter-spacing: 0px;
+                    }
+                }
+            }
+            .divider{
+                border-right: 1px solid rgba(84, 95, 125, 0.2);
+                width: 2px;
+                height: 90px;
+            }
+            .user-info-tier{
+                &-label{
+                    font-family: var(--textFamily);
+                    font-size: 14px;
+                    color: #545F7D;
+                    font-weight: 500;
+                    letter-spacing: 0px;
+                }
+            }
+            .accountBalanceSession{
+                .accountBalance{
+                    font-family: var(--textFamily);
+                    font-size: 22px;
+                    color: var(--primaryColor);
+                    font-weight: 500;
+                    letter-spacing: 0px;
+                }
+                .accountNumber{
+                    font-family: var(--textFamily);
+                    font-size: 12px;
+                    color: #545F7D;
+                    font-weight: 400;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+
+
+        // css for the informations
+
+
+        .info-section {
+            // padding: 24px 0;
+            padding-bottom: 20px;
+            width: 100%;
+            .details-title {
+                font-family: var(--textFamily);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0px;
+                color: var(--primaryColor);
+                padding-bottom: 20px;
+            }
+            .detail-grid {
+                display: grid;
+                // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 24px 32px;
+                width: 100%;
+                grid-template-columns: repeat(5, 1fr);
+
+            }
+            .education-employment{
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media (max-width: 1115px) {
+                .detail-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 1024px) {
+                .detail-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 600px) {
+                .detail-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .detail-grid_item{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                &_label{
+                    font-family: var(--textFamily);
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                    text-transform: uppercase;
+                    color: var(--primaryColor)
+
+                }
+                &_value{
+                    font-family: var(--textFamily);
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                    color: var(--primaryColor)
+                }
+            }
+         
+        }
+    
+
+        .info-divider{
+            border-bottom: 1px solid rgba(84, 95, 125, 0.1);
+            width: 100%;
+            height: 1px;
+            margin: 5px 0px 25px;
+        }
+
+    }
+
+}

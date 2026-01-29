@@ -1,0 +1,39 @@
+.user-actions {
+  position: relative;
+
+  &__trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #545f7d;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: 24px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    min-width: 160px;
+
+    button {
+      padding: 10px 14px;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      color: #545f7d;
+      display: block;
+      width: 100%;
+
+      &:hover {
+        background: #f5f7fa;
+      }
+    }
+  }
+}
